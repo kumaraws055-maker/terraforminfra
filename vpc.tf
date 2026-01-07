@@ -5,3 +5,12 @@ resource "aws_vpc" "demogitvpc" {
     "Name" = "DevGitVpc"
   }
   }
+
+  resource "aws_subnet" "demogitsubnet-1" {
+    vpc_id = aws_vpc.demogitvpc.id
+    cidr_block = "10.15.1.0/24"
+    availability_zone = "ap-south-1a"
+    tags = {
+      "Name" = "DevGitSubnet-1"
+    }
+  }
