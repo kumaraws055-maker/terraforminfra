@@ -15,10 +15,10 @@ resource "aws_vpc" "demogitvpc" {
     }
   }
 
-  resource "aws_subnet" "demogitsubnet-2" {
+    resource "aws_subnet" "demogitsubnet-2" {
     vpc_id = aws_vpc.demogitvpc.id
-    cidr_block = "10.15.20.0/24"
-    availability_zone = "ap-south-1c"
+    cidr_block = "10.15.2.0/24"
+    availability_zone = "ap-south-1b"
     tags = {
       "Name" = "DevGitSubnet-2"
     }
