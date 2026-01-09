@@ -23,3 +23,10 @@ resource "aws_vpc" "demogitvpc" {
       "Name" = "DevGitSubnet-2"
     }
   }
+
+  resource "aws_internet_gateway" "demoigw" {
+    vpc_id = aws_vpc.demogitvpc.id
+    tags = {
+      "Name"="DemoGItIGW"
+    }
+  }
